@@ -2,7 +2,7 @@
 #include <mysql/mysql.h>
 #include <fstream>
 
-//定义http响应的一些状态信息
+//定义http响应状态信息
 const char* ok_200_title = "OK";
 const char* error_400_title = "Bad Request";
 const char* error_400_form = "Your request has bad syntax or is inherently impossible to staisfy.\n";
@@ -46,7 +46,6 @@ void http_conn::initmysql_result(connection_pool* connPool)
     }
 }
 
-//这几个为啥不限定命名空间啊？
 //对文件描述符设置非阻塞
 int setnonblocking(int fd)
 {

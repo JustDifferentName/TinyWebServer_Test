@@ -40,7 +40,7 @@ public:
 public:
     time_t expire; //超时时间
 
-    void (*cb_func)(client_data*); //http搞完应该能看懂
+    void (*cb_func)(client_data*);
     client_data* user_data;
     util_timer* prev;
     util_timer* next;
@@ -64,7 +64,7 @@ private:
     util_timer* tail;
 };
 
-class Utils //Util是工具的意思，一般来说，常常用来描述和业务逻辑没有关系的数据处理
+class Utils //数据处理工具类
 {
 public:
     Utils() {}

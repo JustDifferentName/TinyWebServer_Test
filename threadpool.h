@@ -122,7 +122,7 @@ void threadpool<T>::run()
         {
             if (0 == request->m_state)
             {
-                if (request->read_once()) //因为是模板类，所以未定义也不会报错呃呃
+                if (request->read_once())
                 {
                     request->improv = 1;
                     connectionRAII mysqlcon(&request->mysql, m_connPool);
